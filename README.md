@@ -14,7 +14,9 @@ Mobile Wireframe: https://www.figma.com/file/tb1uhhfqI9SR14AO3Zm3gL/Untitled?typ
 
 ## Who the website is catering for? The value that it is providing to users.
 
-The previous website had horrendous UI and UX, greatly impacting the users' ability to see, navigate and understand the information provided. The revamped website will allow all users to navigate through the website more efficiently. Since people accessing the website are looking for parts for their cars, they would want to see the information easily.
+The previous website had horrendous UI and UX, greatly impacting the users' ability to see, navigate and understand the information provided. 
+
+The revamped website will allow all users to navigate through the website more efficiently. Since people accessing the website are looking for parts for their cars, they would want to see the information easily.
 
 ## Features
 
