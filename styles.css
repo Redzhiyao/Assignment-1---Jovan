@@ -354,17 +354,25 @@ template {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
+  font-family: "Helvetica", Sans-Serif;
 }
 
 header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 10%;
-  background-color: #F2F5F7;
+  padding: 10px 5px;
+  background-color: #f2f5f7;
+}
+
+body {
+  min-height: 140vh;
+  display: flex;
+  flex-direction: column;
 }
 
 .logo {
+  float: left;
   cursor: pointer;
 }
 
@@ -375,7 +383,7 @@ header {
   text-decoration: none;
 }
 
-.cta{
+.cta {
   font-weight: 500;
   color: #ffffff;
   text-decoration: none;
@@ -395,12 +403,12 @@ header {
 }
 
 .nav__links li a:hover {
-  color: #3b14d9;
+  color: #696969;
 }
 
 .cta {
   padding: 9px 25px;
-  background-color: #424B5A;
+  background-color: #424b5a;
   border: none;
   border-radius: 50px;
   cursor: pointer;
@@ -409,4 +417,183 @@ header {
 
 .cta:hover {
   background-color: rgba(144, 144, 144, 0.8);
+}
+
+#offer {
+  padding: 0px 15px;
+  width: 1536px;
+  object-fit: cover;
+}
+.index-box {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+}
+.index-left {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+.left-text {
+  text-align: center;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.right-text {
+  text-align: center;
+  padding-top: 7px;
+  padding-bottom: 7px;
+}
+.index-right {
+  display: flex;
+  flex-direction: column;
+  padding: 50px;
+}
+#about-us-button {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  padding: 0 1.25rem;
+  line-height: 2.125rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 0.125rem;
+  text-decoration: none;
+  color: white;
+  background-color: #344268;
+}
+#shop-here-button {
+  position: relative;
+  display: inline-flex;
+  flex: 0 0 auto;
+  flex-direction: row;
+  justify-content: center;
+  align-self: center;
+  padding: 0 1.25rem;
+  line-height: 2.125rem;
+  font-size: 0.875rem;
+  font-weight: 400;
+  text-align: center;
+  margin: 0.125rem;
+  text-decoration: none;
+  color: white;
+  background-color: #344268;
+}
+
+footer {
+  display: flex;
+  margin-top: auto;
+  justify-content: center;
+  text-align: center;
+  border: none;
+  background-color: #d9d9d9;
+}
+.menu {
+  display: none;
+}
+
+.overlay {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  background-color: #24252a;
+  overflow-x: hidden;
+  transition: width 0.5s ease 0s;
+}
+
+.overlay--active {
+  width: 100%;
+}
+
+.overlay__content {
+  display: flex;
+  height: 100%;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.overlay a {
+  padding: 15px;
+  font-size: 36px;
+  display: block;
+  transition: color 0.3s ease 0s;
+}
+
+.overlay a:hover,
+.overlay a:focus {
+  color: #0088a9;
+}
+.overlay .close {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+  color: #edf0f1;
+}
+
+
+.items-container {
+  display: flex;
+  flex-wrap: wrap;
+  padding-top:40px
+}
+
+.items-details{
+  flex-wrap: wrap;
+  align-items: center;
+}
+
+.item-details button {
+  padding-left: 10px;
+  width: 154px;
+  height: 53px;
+  background-color: #344268;
+  box-shadow: 0px 4px 4px #0000001a;
+  align-items: center;
+  text-align: center;
+  justify-content: center;
+  color: white;
+}
+
+.item-details img{
+  border: 1px solid;
+  width: 271px;
+  height: auto;
+  padding-bottom: 1px;
+  overflow: hidden; /* Ensure the border-radius is applied */
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+}
+
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 20px;
+  }
+  .overlay .close {
+    font-size: 40px;
+    top: 15px;
+    right: 35px;
+  }
+}
+
+@media only screen and (max-width: 800px) {
+  /* removes offer banner and displays the mobile menu */
+  .nav__links,
+  .cta {
+    display: none;
+  }
+  .menu {
+    display: initial;
+  }
+  #offer {
+    display: none;
+  }
 }
