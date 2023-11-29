@@ -377,7 +377,9 @@ body {
 }
 
 .nav__links a,
+.cta,
 .overlay__content a {
+  font-family: "Montserrat", sans-serif;
   font-weight: 500;
   color: #000000;
   text-decoration: none;
@@ -438,16 +440,26 @@ body {
   text-align: center;
   padding-top: 7px;
   padding-bottom: 7px;
+  font-size: 24px;
 }
 .right-text {
   text-align: center;
   padding-top: 7px;
   padding-bottom: 7px;
+  font-size: 24px;
 }
 .index-right {
   display: flex;
   flex-direction: column;
   padding: 50px;
+}
+.index-left img{
+  width: 550px; 
+  height: auto
+}
+.index-right img{
+ width: 550px; 
+ height: auto
 }
 #about-us-button {
   position: relative;
@@ -509,12 +521,12 @@ footer {
 }
 
 .overlay--active {
-  width: 100%;
+  width: 80%;
 }
 
 .overlay__content {
   display: flex;
-  height: 100%;
+  height: 75%;
   flex-direction: column;
   align-items: center;
   justify-content: center;
@@ -525,6 +537,7 @@ footer {
   font-size: 36px;
   display: block;
   transition: color 0.3s ease 0s;
+  color: white;
 }
 
 .overlay a:hover,
@@ -539,38 +552,45 @@ footer {
   color: #edf0f1;
 }
 
-
+/* Products Page */
+.select {
+  border: 1px solid;
+  padding: 5px;
+}
+.select:focus{
+  outline:none;
+}
 .items-container {
   display: flex;
+  justify-content: start;
   flex-wrap: wrap;
-  padding-top:40px
-}
-
-.items-details{
-  flex-wrap: wrap;
-  align-items: center;
+  padding: 30px;
 }
 
 .item-details button {
-  padding-left: 10px;
-  width: 154px;
-  height: 53px;
+  width: 130px;
+  height: 40px;
   background-color: #344268;
   box-shadow: 0px 4px 4px #0000001a;
   align-items: center;
   text-align: center;
-  justify-content: center;
   color: white;
 }
 
-.item-details img{
+.item-details .description{
+  font-size: 15px;
+}
+.item-details {
+  padding: 25px;
+  flex-basis: 21%;
+  text-align: center;
+}
+.item-details img {
   border: 1px solid;
-  width: 271px;
+  width: 183px;
   height: auto;
   padding-bottom: 1px;
-  overflow: hidden; /* Ensure the border-radius is applied */
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
+  overflow: hidden;
 }
 
 @media screen and (max-height: 450px) {
@@ -585,7 +605,6 @@ footer {
 }
 
 @media only screen and (max-width: 800px) {
-  /* removes offer banner and displays the mobile menu */
   .nav__links,
   .cta {
     display: none;
@@ -593,7 +612,28 @@ footer {
   .menu {
     display: initial;
   }
-  #offer {
+  #offer{
     display: none;
+  }
+  .index-box{
+    flex-direction: column;
+  }
+  .index-left img{
+    width: 330px;
+    height: auto;
+  }
+  .index-right img{
+    width: 330px;
+    height: auto;
+  }
+  .items-container{
+    justify-content: center;
+  }
+  .title{
+    padding:5px;
+    text-align: center;
+  }
+  select{
+    align-items: center;  
   }
 }

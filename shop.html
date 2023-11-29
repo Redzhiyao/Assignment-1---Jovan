@@ -4,53 +4,89 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <link rel="stylesheet", href="styles.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   </head>
   <body>
-    <header> 
-      <a class="logo" href="/"><img src="img/logo.png" alt="logo" style=width:270px;height:auto></a>
+    <header>
+      <a class="logo" href="/"><img src="img/logo.png" alt="logo" style="width: 270px; height: auto"/></a>
       <nav>
         <ul class="nav__links">
-          <li><a href="index.html">HOME</a></li>
-          <li><a href="shop.html"><b>SHOP</b></a></li>
+          <li><a href="index.html"><b>HOME</b></a></li>
+          <li><a href="shop.html">SHOP</a></li>
           <li><a href="categories.html">CATEGORIES</a></li>
-          <li><a href="t&c.html">TERM AND CONDITIONS</a></li>
+          <li><a href="t&c.html">T&C</a></li>
           <li><a href="about.html">ABOUT US</a></li>
         </ul>
-      </nav>  
-      <a class="user-icon"><img src="img/personIcon.png " alt="person" style=width:40px;height:auto></a>
-      <a href="cart.html" class="shopping-cart-icon"><img src="img/icon-shop.png " alt="shopping-cart" style=width:40px;height:auto></a>
+      </nav>
+      <a class="user-icon"><img src="img/personIcon.png " alt="person" style="width: 40px; height: auto" /></a>
+      <a href="cart.html" class="shopping-cart-icon"><img src="img/icon-shop.png " alt="shopping-cart" style="width: 40px; height: auto" z/></a>
       <a class="cta">SIGN UP NOW!</a>
-      <p class="menu cta">Menu</p>
+      <p class="menu cta"><i class="fa fa-bars" aria-hidden="true"></i></p>
+      <div class="overlay">
+        <a class="close">&times;</a>
+        <div class="overlay__content">
+          <a href="index.html">HOME</a>
+          <a href="shop.html"><b>SHOP</b></a>
+          <a href="categories.html">CATEGORIES</a>
+          <a href="t&c.html">T&C</a>
+          <a href="about.html">ABOUT US</a>
+        </div>
+    </div>
     </header>
     <main>
-      <h2>Products</h2>
+      <h2 class="title">All Products</h2>
+      <select>
+        <option>Default</option>
+        <option>Sort by Price</option>
+      </select>
       <div class="items-container">
         <div class="item-details">
           <img src="img/brakePad.png" alt="">
           <div class="item-name" id="item-name-one"><h4>BrakePad</h4></div>
+          <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
           <div class="price">$150</div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <p><button>ADD TO CART</button></p>
         </div>
         <div class="item-details">
           <img src="img/brakePad.png" alt="">
           <div class="item-name" id="item-name-two"><h4>BrakePad</h4></div>
-          <div class="price">$150</div>
           <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+          <div class="price">$150</div>
           <p><button>ADD TO CART</button></p>
         </div>
         <div class="item-details">
           <img src="img/brakePad.png" alt="">
           <div class="item-name" id="item-name-three"><h4>BrakePad</h4></div>
+          <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
           <div class="price">$150</div> 
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
           <p><button>ADD TO CART</button></p>
         </div>
         <div class="item-details">
           <img src="img/brakePad.png" alt="">
           <div class="item-name" id="item-name-four"><h4>BrakePad</h4></div>
+          <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
           <div class="price">$150</div>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+          <p><a href="cart.html"><button>ADD TO CART</button></a></p>
+        </div>
+        <div class="item-details">
+          <img src="img/brakePad.png" alt="">
+          <div class="item-name" id="item-name-five"><h4>BrakePad</h4></div>
+          <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+          <div class="price">$150</div>
+          <p><a href="cart.html"><button>ADD TO CART</button></a></p>
+        </div>
+        <div class="item-details">
+          <img src="img/brakePad.png" alt="">
+          <div class="item-name" id="item-name-six"><h4>BrakePad</h4></div>
+          <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+          <div class="price">$150</div>
+          <p><a href="cart.html"><button>ADD TO CART</button></a></p>
+        </div>
+        <div class="item-details">
+          <img src="img/brakePad.png" alt="">
+          <div class="item-name" id="item-name-seven"><h4>BrakePad</h4></div>
+          <div class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit.</div>
+          <div class="price" style=>$150</div>
           <p><a href="cart.html"><button>ADD TO CART</button></a></p>
         </div>
       </div>
