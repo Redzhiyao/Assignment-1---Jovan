@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet", href="styles.css" />
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cart page</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   </head>
   <body>
     <header>
-      <a class="logo" href="/"><img src="img/logo.png" alt="logo" style="width: 270px; height: auto"/></a>
+      <a class="logo" href="index.html"><img src="img/logo.png" alt="logo" style="width: 270px; height: auto"></a>
       <nav>
         <ul class="nav__links">
           <li><a href="index.html">HOME</a></li>
@@ -16,8 +17,8 @@
           <li><a href="categories.html">CATEGORIES</a></li>
         </ul>
       </nav>
-      <a class="user-icon"><img src="img/personIcon.png " alt="person" style="width: 40px; height: auto" /></a>
-      <a href="cart.html" class="shopping-cart-icon"><img src="img/icon-shop.png " alt="shopping-cart" style="width: 40px; height: auto" z/></a>
+      <a class="user-icon"><img src="img/personIcon.png " alt="person" style="width: 40px; height: auto"></a>
+      <a href="cart.html" class="shopping-cart-icon"><img src="img/icon-shop.png " alt="shopping-cart" style="width: 40px; height: auto"></a>
       <a class="cta">SIGN UP NOW!</a>
       <p class="menu cta"><i class="fa fa-bars" aria-hidden="true"></i></p>
       <div class="overlay">
@@ -26,12 +27,82 @@
           <a href="index.html">HOME</a>
           <a href="shop.html">SHOP</a>
           <a href="categories.html">CATEGORIES</a>
-          <a id="sign-up-button" href="signUp.html">SIGN UP NOW!</a>
-        </div>
+          <a id="sign-up-button" href="signup.html">SIGN UP NOW!</a>
+        </div>  
     </div>
     </header>
-    <main>
-      
+    <main> 
+      <!--Credit to W3Schools-->
+      <div class="cart-details">
+        <div class="col-75"> <!--defines a column layout for 75% width, every other col-num is the same idea-->
+          <div class="cart-container">
+            <form action="thankyoupage.html">
+              <div class="cart-details">
+                <div class="col-50">
+                  <h3>Billing Address</h3>
+                  <label for="fname"><i class="fa fa-user"></i> Full Name</label>
+                  <input type="text" id="fname" name="firstname" placeholder="John M. Doe" required>
+                  <label for="email"><i class="fa fa-envelope"></i> Email</label>
+                  <input type="text" id="email" name="email" placeholder="john@example.com" required>
+                  <label for="adr"><i class="fa fa-address-card-o"></i> Address</label>
+                  <input type="text" id="adr" name="address" placeholder="542 W. 15th Street" required>
+                  <label for="city"><i class="fa fa-institution"></i> City</label>
+                  <input type="text" id="city" name="city" placeholder="New York" required>
+                  <div class="cart-details">
+                    <div class="col-50">
+                      <label for="state">State</label>
+                      <input type="text" id="state" name="state" placeholder="NY" required>
+                    </div>
+                    <div class="col-50">
+                      <label for="zip">Zip</label>
+                      <input type="text" id="zip" name="zip" placeholder="10001" required>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-50">
+                  <h3>Payment</h3>
+                  <label for="fname">Accepted Cards</label>
+                  <div class="icon-container">
+                    <i class="fa fa-cc-visa" style="color:navy;"></i>
+                    <i class="fa fa-cc-mastercard" style="color:rgb(255, 12, 12);"></i>
+                  </div>
+                  <label for="cname">Name on Card</label>
+                  <input type="text" id="cname" name="cardname" placeholder="John More Doe" required>
+                  <label for="ccnum">Credit card number</label>
+                  <input type="text" id="ccnum" name="cardnumber" placeholder="1111-2222-3333-4444" required>
+                  <label for="expmonth">Exp Month</label>
+                  <input type="text" id="expmonth" name="expmonth" placeholder="September" required>
+                  <div class="cart-details">
+                    <div class="col-50">
+                      <label for="expyear">Exp Year</label>
+                      <input type="text" id="expyear" name="expyear" placeholder="2018" required>
+                    </div>
+                    <div class="col-50">
+                      <label for="cvv">CVV</label>
+                      <input type="text" id="cvv" name="cvv" placeholder="352" required>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <label>
+                <input type="checkbox" checked="checked" name="sameadr"> Shipping address same as billing
+              </label>
+              <input type="submit" value="Continue to checkout" class="btn">
+            </form>
+          </div>
+        </div>
+        <div class="col-25">
+          <div class="cart-container">
+            <h4>Cart <span class="price" style="color:black"><i class="fa fa-shopping-cart"></i> <b id="item-quantity">4</b></span></h4>
+            <p><a href="#">Product 1</a> <span class="price">$15</span></p>
+            <p><a href="#">Product 2</a> <span class="price">$5</span></p>
+            <p><a href="#">Product 3</a> <span class="price">$8</span></p>
+            <p><a href="#">Product 4</a> <span class="price">$2</span></p>
+            <hr>
+            <p>Total <span class="price" style="color:black"><b>$30</b></span></p>
+          </div>
+        </div>
+      </div>
     </main>
     <footer>
       <div class="bottom-bar">
@@ -40,6 +111,6 @@
         </p>
       </div>
     </footer>
-    <script type="text/javascript" src="script.js"></script>
+    <script src="script.js"></script>
   </body>
 </html>
