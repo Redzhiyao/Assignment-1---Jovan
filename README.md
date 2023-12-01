@@ -24,10 +24,8 @@ The revamped website will allow all users to navigate through the website more e
 - Feature 2 - Banner to show discounts
 - Feature 3 - Allows users to navigate the website without being harassed by a pop-up telling them to log in or sign up first.
 - Feature 4 - Forced requirement for form field during payment
-
-- Feature 4 - Overall upgrade in terms of UI for both Desktop and Mobile versions.
-
-- Feature 0 - On mobile, users can press the hamburger menu to open up a sidebar to access different parts of the website easily
+- Feature 5 - Overall upgrade in terms of UI for both Desktop and Mobile versions.
+- Feature 6 - On mobile, users can press the hamburger menu to open up a sidebar to access different parts of the website easily
 
 ## Technologies Used
 
