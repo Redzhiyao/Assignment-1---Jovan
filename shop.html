@@ -1,10 +1,11 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <title>shop page</title>
   </head>
   <body>
     <header>
@@ -14,11 +15,12 @@
           <li><a href="index.html">HOME</a></li>
           <li><a href="shop.html"><b>SHOP</b></a></li>
           <li><a href="categories.html">CATEGORIES</a></li>
+          <li><a href="aboutus.html">ABOUT US</a></li>
         </ul>
       </nav>
-      <a class="user-icon"><img src="img/personIcon.png " alt="person" style="width: 40px; height: auto" /></a>
+      <a class="user-icon"><img src="img/personIcon.png " alt="person" style="width: 40px; height: auto"></a>
       <a href="cart.html" class="shopping-cart-icon"><img src="img/icon-shop.png " alt="shopping-cart" style="width: 40px; height: auto"></a>
-      <a class="cta">SIGN UP NOW!</a>
+      <a href="signup.html" class="cta">SIGN UP NOW!</a>
       <p class="menu cta"><i class="fa fa-bars" aria-hidden="true"></i></p>
       <div class="overlay">
         <a class="close">&times;</a>
@@ -26,61 +28,65 @@
           <a href="index.html">HOME</a>
           <a href="shop.html"><b>SHOP</b></a>
           <a href="categories.html">CATEGORIES</a>
-          <a id="sign-up-button" href="signup.html">SIGN UP NOW!</a>  
+          <a href="aboutus.html">ABOUT US</a>
+          <a href="signup.html" id="sign-up-button">SIGN UP</a>
         </div>
-    </div>
+      </div>
     </header>
     <main>
       <h2 class="title">All Products</h2>
-      <select>
-        <option>Default</option>
-        <option>Sort by Price</option>
-      </select>
-      <div class="items-container">
+      <div class="sort">
+        <select class="sort-select">
+          <option>Default</option>  <!-- Makes a dropdown to filter by price -->
+          <option>Sort by Price (high to low)</option>
+          <option>Sort by Price (low to high)</option>
+        </select>
+      </div>
+      <div class="items-container"> <!-- Contains details of in shop -->
         <div class="item-details">
-          <img src="img/brakepad.jpg" alt="">
+          <img src="img/brakepad.jpg" alt="brakePad">
           <div class="item-name" id="item-name-one"><h4>BrakePad</h4></div>
           <div class="description">Brake pads front axle B110993.</div>
           <div class="price">$92</div>
           <a href="cart.html"><p><button class="add-to-cart-btn">ADD TO CART</button></p></a>
         </div>
         <div class="item-details">
-          <img src="img/filter.jpg" alt="">
+          <img src="img/filter.jpg" alt="filter">
           <div class="item-name" id="item-name-two"><h4>Filter</h4></div>
           <div class="description">Fuel filter Filter insert PM999/7.</div>
           <div class="price">$150</div>
           <a href="cart.html"><p><button class="add-to-cart-btn">ADD TO CART</button></p></a>
         </div>
         <div class="item-details">
-          <img src="img/ignition.jpg" alt="">
+          <img src="img/ignition.jpg" alt="ignition">
           <div class="item-name" id="item-name-three"><h4>Ignition Set</h4></div>
           <div class="description">Glow plug Spannung: 4.40V 1152.</div>
           <div class="price">$48</div> 
           <a href="cart.html"><p><button class="add-to-cart-btn">ADD TO CART</button></p></a>
         </div>
         <div class="item-details">
-          <img src="img/undercarriage.jpg" alt="">
+          <img src="img/undercarriage.jpg" alt="undercarriage">
           <div class="item-name" id="item-name-four"><h4>Undercarriage</h4></div>
           <div class="description">Engine mount front axle 531418.</div>
           <div class="price">$600</div>
           <a href="cart.html"><p><button class="add-to-cart-btn">ADD TO CART</button></p></a>
         </div>
         <div class="item-details">
-          <img src="img/carbody.jpg" alt="">
+          <img src="img/carbody.jpg" alt="carbody">
           <div class="item-name" id="item-name-five"><h4>Body parts</h4></div>
           <div class="description">Door front left, front right, rear left, rear right.</div>
           <div class="price">$190</div>
           <a href="cart.html"><p><button class="add-to-cart-btn">ADD TO CART</button></p></a>
         </div>
         <div class="item-details">
-          <img src="img/motor.jpg" alt="">
+          <img src="img/motor.jpg" alt="motor">
           <div class="item-name" id="item-name-six"><h4>Motor</h4></div>
           <div class="description">2.5-litre diesel engine, engine Code 11J, 12J, 13J, 14J and 15J.</div>
           <div class="price">$490</div>
           <a href="cart.html"><p><button class="add-to-cart-btn">ADD TO CART</button></p></a>
         </div>
         <div class="item-details">
-          <img src="img/shockAbsorb.jpg" alt="">
+          <img src="img/shockAbsorb.jpg" alt="shockabsorb">
           <div class="item-name" id="item-name-seven"><h4>Shock Absorbers</h4></div>
           <div class="description">Shock absorber front axle and Spring bearing damper 4000032.</div>
           <div class="price">$2500</div>
@@ -96,5 +102,6 @@
       </div>
     </footer>
     <script src="script.js"></script>
+    <script src="sort.js"></script>
   </body>
 </html>

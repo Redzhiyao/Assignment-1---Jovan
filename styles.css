@@ -350,11 +350,15 @@ template {
   display: none;
 }
 
+/* START OF CODE */
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
   padding: 0;
-  font-family: "Helvetica", Sans-Serif;
+  font-family: 'Poppins', Sans-Serif; /* changes font to Poppins */
 }
 
 header {
@@ -574,30 +578,31 @@ body {
   color: white;
   background-color: #344268;
 }
+
 /* ----------------------------------- */
 
 /* CART SECTION */
 .cart-details {
-  display: -ms-flexbox; /* IE10 */
+  display: -ms-flexbox; 
   display: flex;
-  -ms-flex-wrap: wrap; /* IE10 */
+  -ms-flex-wrap: wrap; 
   flex-wrap: wrap;
   margin: 0 -16px;
   padding: 40px;
 }
 
 .col-25 {
-  -ms-flex: 25%; /* IE10 */
+  -ms-flex: 25%; /* changes to 25% */
   flex: 25%;
 }
 
 .col-50 {
-  -ms-flex: 50%; /* IE10 */
+  -ms-flex: 50%; /* changes to 50% */
   flex: 50%;
 }
 
 .col-75 {
-  -ms-flex: 75%; /* IE10 */
+  -ms-flex: 75%; /* changes to 75% */
   flex: 75%;
 }
 
@@ -614,12 +619,12 @@ body {
   border-radius: 3px;
 }
 
-input[type="text"] {
+input[type="text"] { /* if input type is text, change to this */
   width: 100%;
   margin-bottom: 20px;
   padding: 12px;
   border: 1px solid #ccc;
-  border-radius: 3px;
+  border-radius: 3px; 
 }
 
 label {
@@ -682,8 +687,9 @@ span.price {
   background-color: #344268;
   cursor: pointer;
 }
-
+/* -------------------------------------*/
 /* Footer */
+
 footer {
   display: flex;
   margin-top: auto;
@@ -693,6 +699,7 @@ footer {
   background-color: #d9d9d9;
 }
 /*--------------------------------------*/
+/* responsive menu */
 .menu {
   display: none;
 }
@@ -705,7 +712,7 @@ footer {
   left: 0;
   top: 0;
   background-color: #24252a;
-  overflow-x: hidden;
+  overflow-x: hidden; /* hides the mobile nav options */
   transition: width 0.5s ease 0s;
 }
 
@@ -725,7 +732,7 @@ footer {
   padding: 15px;
   font-size: 36px;
   display: block;
-  transition: color 0.3s ease 0s;
+  transition: color 0.3s ease 0s; /* ensure that the menu does not instantly appear */
   color: white;
 }
 
@@ -749,17 +756,23 @@ footer {
   font-size: 60px;
   color: #edf0f1;
 }
-
+/* ----------------------------------*/
 /* Products Page */
+
 .title {
   padding: 20px;
+  text-align: center;
 }
 
-.select {
+.sort{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.sort-select {
   border: 1px solid;
   padding: 5px;
 }
-
 .select:focus {
   outline: none;
 }
@@ -785,11 +798,13 @@ footer {
 .item-details .description {
   font-size: 15px;
 }
+
 .item-details {
   padding: 25px 20px;
   flex-basis: 21%;
   text-align: center;
 }
+
 .item-details img {
   border: 1px solid;
   width: 183px;
@@ -798,6 +813,64 @@ footer {
   overflow: hidden;
 }
 
+/* ----------------------------------------------*/
+/*About us page */
+
+.about-top{
+  width:90%;
+  display:flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  margin:20px auto;
+}
+
+.about-title{
+  font-size: 60px;
+  position:relative;
+}
+
+.about-container{
+  width: 90%;
+  margin: 0 auto;
+  padding:10px 20px;
+}
+.about-items{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+}
+.about-image{
+  flex:1;
+  margin-right: 40px;
+  overflow: hidden;
+}
+.about-image img{
+  max-width: 100%;
+  height:auto;
+  display: block;
+  transition: 0.5s ease;
+}
+.about-image:hover img {
+  transform: scale(1.2);
+}
+.about-text{
+  flex:1;
+}
+.about-text h2{
+  font-size: 25px;
+  margin-bottom: 15px;
+}
+.about-text p{
+  font-size: 20px;
+  line-height: 1.5;
+}
+
+/* --------------------------------*/
+
+/* Media Query for mobile (Iphone 14 Pro Max */
 @media screen and (max-height: 430px) {
   .overlay a {
     font-size: 20px;
@@ -807,9 +880,11 @@ footer {
     top: 15px;
     right: 35px;
   }
+  
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 440px) {
+  
   .nav__links,
   .cta {
     display: none;
@@ -847,4 +922,39 @@ footer {
   .col-25 {
     margin-bottom: 20px;
   }
+
+  /* resizing of images */
+
+  .categories-top img {
+    width: 300px;
+    height: auto;
+  }
+  .categories-middle img {
+    width: 300px;
+    height: auto;
+    }
+  .categories-bottom img {
+    width: 300px;
+    height: auto;
+  }
+
+  body{
+    min-height: 210vh;
+  }
+
+  .about-top{
+    padding:0px 20px;
+  }
+  .about-container{
+    padding:0px;
+  }
+  .about-items{
+    padding:20px;
+    flex-direction: column;
+    text-align: center;
+  }
+  .about-image{
+    justify-content: center;
+  }
+
 }
