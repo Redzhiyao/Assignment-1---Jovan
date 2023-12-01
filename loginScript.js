@@ -1,20 +1,41 @@
-//credit to codingnepal
 const forms = document.querySelector(".forms"),
-pwShowHide = document.querySelectorAll(".eye"),
+pwShowHide = document.querySelectorAll(".eye-icon"),
 links = document.querySelectorAll(".link");
 
-pwShowHide.forEach((eye) => {
-eye.addEventListener("click", () => {
-let pwFields = eye.parentElement.parentElement.querySelectorAll(".password");
-    // if the icon is hidden, change the icon to showing, which corresponds with the text in the password
+pwShowHide.forEach((eyeIcon) => {
+eyeIcon.addEventListener("click", () => {
+let pwFields = eyeIcon.parentElement.parentElement.querySelectorAll(".password");
+
     pwFields.forEach((password) => {
       if (password.type === "password") {
         password.type = "text";
-        eye.classList.replace("bx-hide", "bx-show");
+        eyeIcon.classList.replace("bx-hide", "bx-show");
         return;
       }
       password.type = "password";
-      eye.classList.replace("bx-show", "bx-hide");
+      eyeIcon.classList.replace("bx-show", "bx-hide");
     });
   });
+});
+
+links.forEach((link) => {
+  link.addEventListener("click", () => {
+    forms.classList.toggle("show-signup");
+  });
+});
+
+const signupButton = document.getElementById('cta');
+const mainSignupButton = document.getElementById('mainSignupButton');
+const mainLoginButton = document.getElementById('mainLoginButton');
+
+function removeSignupButton() {
+    cta.style.display = 'none';
+}
+
+mainSignupButton.addEventListener('click', () => {
+    removeSignupButton();
+});
+
+mainLoginButton.addEventListener('click', () => {
+    removeSignupButton();
 });
